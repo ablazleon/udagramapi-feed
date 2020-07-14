@@ -1,0 +1,48 @@
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-4zb4n-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1594726130.5735247,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-4zb4n-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-4zb4n-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-4zb4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ablazleon-udagram-api-feed-mast-4zb4n-td52x[0m
+{"level":"info","ts":1594726241.4595838,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*********/udagram-api-feed.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1594726241.4596941,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1594726241.4999723,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-4zb4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-4zb4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-4zb4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-4zb4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-4zb4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+
+> bcrypt@3.0.6 install /workspace/source/node_modules/bcrypt
+> node-pre-gyp install --fallback-to-build
+
+node-pre-gyp WARN Using needle for node-pre-gyp https download 
+[bcrypt] Success: "/workspace/source/node_modules/bcrypt/lib/binding/bcrypt_lib.node" is installed via remote
+npm WARN udagram-api@2.0.0 No description
+npm WARN udagram-api@2.0.0 No repository field.
+
+added 511 packages from 965 contributors and audited 515 packages in 14.279s
+found 22 vulnerabilities (21 low, 1 moderate)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-4zb4n-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> udagram-api@2.0.0 test /workspace/source
+> echo "Error: no test specified" && exit 1
+
+Error: no test specified
+npm ERR! Test failed.  See above for more details.
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-npm-test'. The execution of the pipeline has stopped.[0m
