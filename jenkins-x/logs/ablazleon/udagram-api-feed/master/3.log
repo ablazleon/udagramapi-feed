@@ -1,0 +1,131 @@
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1594761046.781246,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ablazleon-udagram-api-feed-mast-h6hpz-twb7m[0m
+{"level":"info","ts":1594761056.7407572,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*********/udagram-api-feed.git @ v0.0.3 in path /workspace/source"}
+{"level":"warn","ts":1594761056.7411323,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1594761056.7794964,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:33a0cf515c5fbdba3c3f6bf382e9cb5032a264e0
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+
+> bcrypt@3.0.6 install /workspace/source/node_modules/bcrypt
+> node-pre-gyp install --fallback-to-build
+
+node-pre-gyp WARN Using needle for node-pre-gyp https download 
+[bcrypt] Success: "/workspace/source/node_modules/bcrypt/lib/binding/bcrypt_lib.node" is installed via remote
+npm WARN udagram-api@2.0.0 No description
+npm WARN udagram-api@2.0.0 No repository field.
+
+added 511 packages from 965 contributors and audited 515 packages in 14.904s
+found 22 vulnerabilities (21 low, 1 moderate)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> udagram-api@2.0.0 test /workspace/source
+> echo "Error: no test specified" 
+
+Error: no test specified
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0714 21:11:28.782134      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0002] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0002] Retrieving image manifest node:13            
+E0714 21:11:29.356158      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0714 21:11:29.359136      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest node:13            
+[36mINFO[0m[0003] Built cross stage deps: map[]                
+[36mINFO[0m[0003] Retrieving image manifest node:13            
+[36mINFO[0m[0003] Retrieving image manifest node:13            
+[36mINFO[0m[0003] Executing 0 build triggers                   
+[36mINFO[0m[0003] Resolving srcs [package*.json]...            
+[36mINFO[0m[0003] Checking for cached layer gcr.io/myenv-283021/cache:44ca7cab85c5ab720df81aee214cee256e3c6a7807abb1a389747ad476bd1f1d... 
+[36mINFO[0m[0004] Using caching version of cmd: COPY package*.json ./ 
+[36mINFO[0m[0004] Checking for cached layer gcr.io/myenv-283021/cache:04635e0499fdf282ccc490cf0103bba86002afca55ad4e56184cf1d821f32c40... 
+[36mINFO[0m[0004] Using caching version of cmd: RUN npm install 
+[36mINFO[0m[0004] Checking for cached layer gcr.io/myenv-283021/cache:1c1fe3f767e0712803fc7fb628cdf1607e5121cf46aeec5dbbb2e8e76b75ac95... 
+[36mINFO[0m[0005] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0005] cmd: EXPOSE                                  
+[36mINFO[0m[0005] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0026] WORKDIR /usr/src/app                         
+[36mINFO[0m[0026] cmd: workdir                                 
+[36mINFO[0m[0026] Changed working directory to /usr/src/app    
+[36mINFO[0m[0026] Creating directory /usr/src/app              
+[36mINFO[0m[0026] Resolving 1 paths                            
+[36mINFO[0m[0026] Taking snapshot of files...                  
+[36mINFO[0m[0026] Resolving srcs [package*.json]...            
+[36mINFO[0m[0026] COPY package*.json ./                        
+[36mINFO[0m[0026] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0026] RUN npm install                              
+[36mINFO[0m[0026] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0032] COPY . .                                     
+[36mINFO[0m[0033] Resolving 207 paths                          
+[36mINFO[0m[0033] Taking snapshot of files...                  
+[36mINFO[0m[0033] EXPOSE 8080                                  
+[36mINFO[0m[0033] cmd: EXPOSE                                  
+[36mINFO[0m[0033] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0033] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0033] CMD [ "npm", "run", "prod" ]                 
+[36mINFO[0m[0033] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0033] Pushing layer gcr.io/myenv-283021/cache:1c1fe3f767e0712803fc7fb628cdf1607e5121cf46aeec5dbbb2e8e76b75ac95 to cache now 
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/udagram-api-feed to an unshallow repository
+Generating change log from git ref ecc6cfc66a643157c0027d9a1621e6e48e575fe0 => f3c8e8da320cf492e861afd8f1668497eeabae6d
+Associating user ********* in users.jenkins.io with email adrian.blazquez.leon@alumnos.upm.es to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user ********* in users.jenkins.io
+WARNING: Failed to enrich commit 6fc22805ff814ceb7fd160b1d0c4a7b6c1cc8a6e with issues: User.jenkins.io "*********" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: Failed to enrich commit 6fc22805ff814ceb7fd160b1d0c4a7b6c1cc8a6e with issues: users.jenkins.io "x-0" already exists
+Finding issues in commit messages using git format
+WARNING: No release found for *********/udagram-api-feed and tag v0.0.3 so creating a new release
+Updated the release information at https://github.com/*********/udagram-api-feed/releases/tag/v0.0.3
+generated: /workspace/source/charts/udagram-api-feed/templates/release.yaml
+Created Release udagram-api-feed-0-0-3 resource in namespace **
+Updating PipelineActivity *********-udagram-api-feed-master-3 with version 0.0.3
+Updated PipelineActivities *********-udagram-api-feed-master-3 with release notes URL: https://github.com/*********/udagram-api-feed/releases/tag/v0.0.3
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file udagram-api-feed-0.0.3.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-h6hpz-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app udagram-api-feed version 0.0.3 to namespace **-staging
+Created Pull Request: https://github.com/*********/environment-udagramcluster-staging/pull/5
+Added label updatebot to Pull Request https://github.com/*********/environment-udagramcluster-staging/pull/5
+WARNING: Failed to query the Pull Request last commit status for https://github.com/*********/environment-udagramcluster-staging/pull/5 ref 2687ace9f8d6d5740b3f5fc6756158813239d43d Could not find a status for repository *********/environment-udagramcluster-staging with ref 2687ace9f8d6d5740b3f5fc6756158813239d43d
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/5
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/5
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/5
+Pull Request https://github.com/*********/environment-udagramcluster-staging/pull/5 is merged at sha 18ce7ae64b56faa87396668155cd20dfd513bb5b
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names udagram-api-feed, **-udagram-api-feed, **-staging-udagram-api-feed
