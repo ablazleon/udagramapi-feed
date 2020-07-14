@@ -1,0 +1,447 @@
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1594746925.9525695,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ablazleon-udagram-api-feed-mast-gcj9w-z9td9[0m
+{"level":"info","ts":1594746935.7538197,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*********/udagram-api-feed.git @ v0.0.2 in path /workspace/source"}
+{"level":"warn","ts":1594746935.7540274,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1594746935.797753,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:e2e8004e8afed087533747589fdac8af0afd1836
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+
+> bcrypt@3.0.6 install /workspace/source/node_modules/bcrypt
+> node-pre-gyp install --fallback-to-build
+
+node-pre-gyp WARN Using needle for node-pre-gyp https download 
+[bcrypt] Success: "/workspace/source/node_modules/bcrypt/lib/binding/bcrypt_lib.node" is installed via remote
+npm WARN udagram-api@2.0.0 No description
+npm WARN udagram-api@2.0.0 No repository field.
+
+added 511 packages from 965 contributors and audited 515 packages in 14.25s
+found 22 vulnerabilities (21 low, 1 moderate)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> udagram-api@2.0.0 test /workspace/source
+> echo "Error: no test specified" 
+
+Error: no test specified
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0714 17:15:54.003367      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Retrieving image manifest node:13            
+E0714 17:15:54.273129      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0714 17:15:54.277400      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0001] Retrieving image manifest node:13            
+[36mINFO[0m[0001] Built cross stage deps: map[]                
+[36mINFO[0m[0001] Retrieving image manifest node:13            
+[36mINFO[0m[0002] Retrieving image manifest node:13            
+[36mINFO[0m[0003] Executing 0 build triggers                   
+[36mINFO[0m[0003] Resolving srcs [package*.json]...            
+[36mINFO[0m[0003] Checking for cached layer gcr.io/myenv-283021/cache:44ca7cab85c5ab720df81aee214cee256e3c6a7807abb1a389747ad476bd1f1d... 
+[36mINFO[0m[0004] Using caching version of cmd: COPY package*.json ./ 
+[36mINFO[0m[0004] Checking for cached layer gcr.io/myenv-283021/cache:04635e0499fdf282ccc490cf0103bba86002afca55ad4e56184cf1d821f32c40... 
+[36mINFO[0m[0004] Using caching version of cmd: RUN npm install 
+[36mINFO[0m[0004] Checking for cached layer gcr.io/myenv-283021/cache:3e515997c63bffaf79cfd924a439ae2187b4b7a15008c49ea5444b174beba94a... 
+[36mINFO[0m[0005] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0005] cmd: EXPOSE                                  
+[36mINFO[0m[0005] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0028] WORKDIR /usr/src/app                         
+[36mINFO[0m[0028] cmd: workdir                                 
+[36mINFO[0m[0028] Changed working directory to /usr/src/app    
+[36mINFO[0m[0028] Creating directory /usr/src/app              
+[36mINFO[0m[0028] Resolving 1 paths                            
+[36mINFO[0m[0028] Taking snapshot of files...                  
+[36mINFO[0m[0028] Resolving srcs [package*.json]...            
+[36mINFO[0m[0029] COPY package*.json ./                        
+[36mINFO[0m[0029] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0029] RUN npm install                              
+[36mINFO[0m[0029] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0035] COPY . .                                     
+[36mINFO[0m[0036] Resolving 205 paths                          
+[36mINFO[0m[0036] Taking snapshot of files...                  
+[36mINFO[0m[0036] Pushing layer gcr.io/myenv-283021/cache:3e515997c63bffaf79cfd924a439ae2187b4b7a15008c49ea5444b174beba94a to cache now 
+[36mINFO[0m[0036] EXPOSE 8080                                  
+[36mINFO[0m[0036] cmd: EXPOSE                                  
+[36mINFO[0m[0036] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0036] CMD [ "npm", "run", "prod" ]                 
+[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/udagram-api-feed to an unshallow repository
+Generating change log from git ref de4aa0ab9a8575db3c970d2f5af6b31605c6cd58 => ecc6cfc66a643157c0027d9a1621e6e48e575fe0
+Associating user ********* in users.jenkins.io with email adrian.blazquez.leon@alumnos.upm.es to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user ********* in users.jenkins.io
+WARNING: Failed to enrich commit 8627c7bd00d6aa86565d06334a9f2f845006875e with issues: User.jenkins.io "*********" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: Failed to enrich commit 8627c7bd00d6aa86565d06334a9f2f845006875e with issues: users.jenkins.io "x-0" already exists
+Finding issues in commit messages using git format
+WARNING: No release found for *********/udagram-api-feed and tag v0.0.2 so creating a new release
+Updated the release information at https://github.com/*********/udagram-api-feed/releases/tag/v0.0.2
+generated: /workspace/source/charts/udagram-api-feed/templates/release.yaml
+Created Release udagram-api-feed-0-0-2 resource in namespace **
+Updating PipelineActivity *********-udagram-api-feed-master-2 with version 0.0.2
+Updated PipelineActivities *********-udagram-api-feed-master-2 with release notes URL: https://github.com/*********/udagram-api-feed/releases/tag/v0.0.2
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file udagram-api-feed-0.0.2.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mablazleon-udagram-api-feed-mast-gcj9w-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app udagram-api-feed version 0.0.2 to namespace **-staging
+Created Pull Request: https://github.com/*********/environment-udagramcluster-staging/pull/3
+Added label updatebot to Pull Request https://github.com/*********/environment-udagramcluster-staging/pull/3
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+WARNING: Failed to merge the Pull Request https://github.com/*********/environment-udagramcluster-staging/pull/3 due to PUT https://api.github.com/repos/*********/environment-udagramcluster-staging/pulls/3/merge: 405 Pull Request is not mergeable [] maybe I don't have karma?
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
+got git provider status pending from PR https://github.com/*********/environment-udagramcluster-staging/pull/3
+Rebasing PullRequest due to conflict
