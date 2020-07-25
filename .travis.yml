@@ -18,6 +18,7 @@ script:
   - docker build -t udagram-api-feed .
   - docker tag udagram-api-feed ablazleon/udagram-api-feed:latest
 
+# Env variables have been specified
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push ablazleon/udagram-api-feed:latest
