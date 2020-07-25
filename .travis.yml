@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t dagram-api-feed .
+  - docker build -t udagram-api-feed .
   - docker tag dagram-api-feed ablazleon/udagram-api-feed:latest
 
 after_success:
